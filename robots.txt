@@ -1,0 +1,7 @@
+# robots.txt untuk Website Resmi TRJTA 24
+User-agent: *
+Allow: /
+Disallow: /admin/
+
+# Peta Situs Resmi (Sitemap)
+Sitemap: https://trjta-24.vercel.app/sitemap.xml
