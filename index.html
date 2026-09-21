@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>TRJTA 24 — Website Resmi Kelas Teknologi Rekayasa Jaringan Telekomunikasi</title>
+  <meta name="description" content="Website resmi kelas TRJTA 24 (Teknologi Rekayasa Jaringan Telekomunikasi) Politeknik Negeri Lhokseumawe. Connect • Learn • Grow Together.">
+  <meta name="keywords" content="TRJTA 24, TRJT, Teknologi Rekayasa Jaringan Telekomunikasi, Politeknik Negeri Lhokseumawe, Teknik Elektro">
+  <meta name="author" content="TRJTA 24">
+
+  <!-- Favicon Resmi TRJTA 24 -->
+  <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+  <link rel="apple-touch-icon" href="assets/icons/favicon.png">
+
+  <!-- Stylesheet Utama -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       NAVBAR (STICKY, RESPONSIVE, HAMBURGER MOBILE)
+       ======================================================================== -->
+  <header class="site-navbar" id="siteNavbar">
+    <div class="container navbar-container">
+      <!-- Brand Logo -->
+      <a href="#home" class="nav-brand" data-view="home">
+        <img src="assets/images/trjta24-logo.png" alt="Logo Resmi TRJTA 24" class="brand-logo-img">
+        <div class="brand-text">
+          <span class="brand-name">TRJTA 24</span>
+          <span class="brand-tag">TRJT • PNL</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" id="desktopNavMenu">
+        <a href="#home" class="nav-link active" data-view="home">Home</a>
+        <a href="#anggota" class="nav-link" data-view="anggota">Anggota</a>
+        <a href="#informasi" class="nav-link" data-view="informasi">Informasi</a>
+        <a href="#galeri" class="nav-link" data-view="galeri">Galeri</a>
+        <a href="#tentang" class="nav-link" data-view="tentang">Tentang</a>
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Buka Menu Navigasi">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Backdrop & Compact Dropdown Sheet -->
+  <div class="mobile-drawer-backdrop" id="drawerBackdrop"></div>
+  <div class="mobile-nav-drawer" id="mobileDrawer">
+    <div class="mobile-nav-items">
+      <a href="#home" class="mobile-nav-link active" data-view="home">
+        <div class="nav-item-left">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          <span>Home</span>
+        </div>
+        <span class="link-arrow">→</span>
+      </a>
+      <a href="#anggota" class="mobile-nav-link" data-view="anggota">
+        <div class="nav-item-left">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          <span>Anggota</span>
+        </div>
+        <span class="link-arrow">→</span>
+      </a>
+      <a href="#informasi" class="mobile-nav-link" data-view="informasi">
+        <div class="nav-item-left">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+          <span>Informasi</span>
+        </div>
+        <span class="link-arrow">→</span>
+      </a>
+      <a href="#galeri" class="mobile-nav-link" data-view="galeri">
+        <div class="nav-item-left">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+          <span>Galeri</span>
+        </div>
+        <span class="link-arrow">→</span>
+      </a>
+      <a href="#tentang" class="mobile-nav-link" data-view="tentang">
+        <div class="nav-item-left">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>Tentang</span>
+        </div>
+        <span class="link-arrow">→</span>
+      </a>
+    </div>
+    <div class="mobile-drawer-footer">
+      <span class="pulse-dot"></span>
+      <span>Connect • Learn • Grow Together</span>
+    </div>
+  </div>
+
+  <main id="mainApp">
+
+    <!-- ======================================================================
+         VIEW 1: HOME
+         ====================================================================== -->
+    <section class="view-section active" id="view-home">
+      
+      <!-- Hero Section -->
+      <div class="hero-section">
+        <div class="hero-tech-bg"></div>
+        <div class="container hero-grid">
+          
+          <!-- Bagian Kiri Hero -->
+          <div class="hero-left">
+            <span class="hero-pretitle">WELCOME TO</span>
+            <h1 class="hero-title">TRJTA <span>24</span></h1>
+            <h2 class="hero-program">Teknologi Rekayasa Jaringan Telekomunikasi</h2>
+            
+            <div class="hero-tagline">
+              <span class="pulse-dot"></span>
+              <span>Connect • Learn • Grow Together</span>
+            </div>
+
+            <p class="hero-desc">
+              TRJTA 24 merupakan keluarga mahasiswa Teknologi Rekayasa Jaringan Telekomunikasi yang belajar, berkembang, berkolaborasi, dan membangun kebersamaan bersama.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#anggota" class="btn btn-primary" data-view="anggota">
+                <span>Lihat Anggota</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              </a>
+              <a href="#informasi" class="btn btn-outline" data-view="informasi">
+                <span>Lihat Informasi</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Bagian Kanan Hero (Logo TRJTA 24) -->
+          <div class="hero-right">
+            <div class="hero-logo-frame">
+              <img src="assets/images/trjta24-logo.png" alt="Logo Resmi TRJTA 24" class="hero-logo-img">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Ringkasan Kelas (3 Cards Modern & Interaktif) -->
+      <div class="container">
+        <div class="summary-cards-grid">
+          
+          <!-- Card 1: Anggota Kelas -->
+          <div class="summary-card" data-view="anggota">
+            <div class="summary-card-header">
+              <div class="summary-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              </div>
+              <span class="card-kpi-badge">17 Mahasiswa</span>
+            </div>
+            <h3 class="summary-card-title">Data Anggota Kelas</h3>
+            <p class="summary-card-desc">Kenali 17 mahasiswa keluarga besar TRJTA 24 secara lengkap dengan NIM resmi.</p>
+            <div class="card-cta-btn">
+              <span>Buka Data Anggota</span>
+              <span class="cta-arrow-circle">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </span>
+            </div>
+          </div>
+
+          <!-- Card 2: Informasi & Agenda -->
+          <div class="summary-card" data-view="informasi">
+            <div class="summary-card-header">
+              <div class="summary-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+              </div>
+              <span class="card-kpi-badge">Akademik & Lab</span>
+            </div>
+            <h3 class="summary-card-title">Pusat Informasi</h3>
+            <p class="summary-card-desc">Pengumuman jadwal perkuliahan, modul praktikum jaringan, dan agenda kelas.</p>
+            <div class="card-cta-btn">
+              <span>Lihat Pengumuman</span>
+              <span class="cta-arrow-circle">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </span>
+            </div>
+          </div>
+
+          <!-- Card 3: Galeri Dokumentasi -->
+          <div class="summary-card" data-view="galeri">
+            <div class="summary-card-header">
+              <div class="summary-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+              </div>
+              <span class="card-kpi-badge">Dokumentasi</span>
+            </div>
+            <h3 class="summary-card-title">Galeri Kegiatan</h3>
+            <p class="summary-card-desc">Dokumentasi perjalanan perkuliahan, praktikum telekomunikasi, dan kebersamaan.</p>
+            <div class="card-cta-btn">
+              <span>Jelajahi Dokumentasi</span>
+              <span class="cta-arrow-circle">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Section: Informasi Terbaru (Home) -->
+      <section class="section-padding bg-alt" style="margin-top: 64px;">
+        <div class="container">
+          <div class="section-header">
+            <span class="badge-tag">
+              <span class="pulse-dot"></span>
+              Update Terkini
+            </span>
+            <h2 class="section-title">Informasi Terbaru</h2>
+            <p class="section-desc">Pengumuman penting dan jadwal terbaru kegiatan perkuliahan kelas TRJTA 24.</p>
+          </div>
+
+          <!-- Dynamic Home Latest Info -->
+          <div class="info-cards-grid" id="homeLatestInfo">
+            <!-- Rendered by main.js -->
+          </div>
+
+          <div class="view-all-center">
+            <a href="#informasi" class="btn btn-outline-red" data-view="informasi">
+              <span>Lihat Semua Informasi</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Galeri Terbaru (Home) -->
+      <section class="section-padding">
+        <div class="container">
+          <div class="section-header">
+            <span class="badge-tag">
+              <span class="pulse-dot"></span>
+              Dokumentasi
+            </span>
+            <h2 class="section-title">Galeri Terbaru</h2>
+            <p class="section-desc">Beberapa potret dokumentasi perjalanan, praktikum, dan kebersamaan TRJTA 24.</p>
+          </div>
+
+          <!-- Dynamic Home Latest Gallery -->
+          <div class="gallery-preview-grid" id="homeLatestGallery">
+            <!-- Rendered by main.js -->
+          </div>
+
+          <div class="view-all-center">
+            <a href="#galeri" class="btn btn-outline-red" data-view="galeri">
+              <span>Lihat Semua Galeri</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </section>
+
+
+    <!-- ======================================================================
+         VIEW 2: ANGGOTA (17 MAHASISWA & PENCARIAN REAL-TIME)
+         ====================================================================== -->
+    <section class="view-section" id="view-anggota">
+      <div class="section-padding">
+        <div class="container">
+          
+          <div class="section-header">
+            <span class="badge-tag">
+              <span class="pulse-dot"></span>
+              17 Mahasiswa • 1 Keluarga • TRJTA 24
+            </span>
+            <h1 class="section-title">Anggota TRJTA 24</h1>
+            <p class="section-desc">Kenali teman-teman yang menjadi bagian dari keluarga TRJTA 24.</p>
+          </div>
+
+          <!-- Search Bar Real-Time -->
+          <div class="member-search-container">
+            <div class="search-box">
+              <span class="search-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              </span>
+              <input type="text" id="memberSearchInput" class="search-input" placeholder="Cari nama atau NIM..." autocomplete="off">
+            </div>
+          </div>
+
+          <div class="search-info-bar">
+            <span id="searchResultCount" class="search-count">Menampilkan 17 mahasiswa</span>
+            <span style="font-size: 0.85rem; color: var(--color-text-light);">Real-time Search Filter</span>
+          </div>
+
+          <!-- Grid Card Anggota (Desktop 4 kolom, Tablet 2-3, Mobile 1-2) -->
+          <div class="members-grid" id="membersGrid">
+            <!-- Rendered by main.js -->
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======================================================================
+         VIEW 3: INFORMASI (PENGUMUMAN & AGENDA KELAS)
+         ====================================================================== -->
+    <section class="view-section" id="view-informasi">
+      <div class="section-padding">
+        <div class="container">
+          
+          <div class="section-header">
+            <span class="badge-tag">
+              <span class="pulse-dot"></span>
+              Pusat Informasi
+            </span>
+            <h1 class="section-title">Informasi TRJTA 24</h1>
+            <p class="section-desc">Informasi, pengumuman, dan agenda terbaru dari TRJTA 24.</p>
+          </div>
+
+          <!-- Bagian 1: Pengumuman -->
+          <div class="info-section-group">
+            <h2 class="info-group-title">Pengumuman Terbaru</h2>
+            <div class="info-cards-grid" id="fullAnnouncementsList">
+              <!-- Rendered by main.js -->
+            </div>
+          </div>
+
+          <!-- Bagian 2: Agenda Kelas -->
+          <div class="info-section-group">
+            <h2 class="info-group-title">Agenda Kelas</h2>
+            <div class="agenda-grid" id="agendaEventsList">
+              <!-- Rendered by main.js -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======================================================================
+         VIEW 4: GALERI (FILTER KATEGORI & LIGHTBOX MODAL)
+         ====================================================================== -->
+    <section class="view-section" id="view-galeri">
+      <div class="section-padding">
+        <div class="container">
+          
+          <div class="section-header">
+            <span class="badge-tag">
+              <span class="pulse-dot"></span>
+              Dokumentasi & Kenangan
+            </span>
+            <h1 class="section-title">Galeri TRJTA 24</h1>
+            <p class="section-desc">Dokumentasi perjalanan, kegiatan, dan kebersamaan TRJTA 24.</p>
+          </div>
+
+          <!-- Filter Kategori Bar -->
+          <div class="gallery-filter-bar">
+            <button class="filter-btn active" data-filter="Semua">Semua</button>
+            <button class="filter-btn" data-filter="Kegiatan Kelas">Kegiatan Kelas</button>
+            <button class="filter-btn" data-filter="Praktikum">Praktikum</button>
+            <button class="filter-btn" data-filter="Acara Kampus">Acara Kampus</button>
+            <button class="filter-btn" data-filter="Foto Bersama">Foto Bersama</button>
+          </div>
+
+          <!-- Grid Galeri Lengkap -->
+          <div class="gallery-grid-full" id="fullGalleryGrid">
+            <!-- Rendered by main.js -->
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======================================================================
+         VIEW 5: TENTANG (IDENTITAS, KUTIPAN & STRUKTUR PENGURUS)
+         ====================================================================== -->
+    <section class="view-section" id="view-tentang">
+      <div class="section-padding">
+        <div class="container">
+          
+          <div class="section-header">
+            <span class="badge-tag">
+              <span class="pulse-dot"></span>
+              Profil & Identitas
+            </span>
+            <h1 class="section-title">Tentang TRJTA 24</h1>
+            <p class="section-desc">Mengenal lebih dekat identitas, semangat, dan keluarga kelas TRJTA 24.</p>
+          </div>
+
+          <!-- Hero Profil Card dengan Logo Resmi -->
+          <div class="about-hero-card">
+            <div class="about-logo-frame">
+              <img src="assets/images/trjta24-logo.png" alt="Logo Resmi TRJTA 24" class="about-logo-img">
+            </div>
+            <p class="about-intro-text">
+              "TRJTA 24 adalah kelas mahasiswa Teknologi Rekayasa Jaringan Telekomunikasi yang memiliki semangat untuk belajar, berkembang, berkolaborasi, serta membangun kebersamaan."
+            </p>
+          </div>
+
+          <!-- Section: Lebih dari Sekadar Kelas -->
+          <div class="togetherness-quote-section">
+            <h2 class="quote-title">Lebih dari Sekadar Kelas</h2>
+            <p class="quote-text">
+              "Kami percaya bahwa proses perkuliahan bukan hanya tentang mempelajari teknologi dan telekomunikasi, tetapi juga tentang membangun pengalaman, kerja sama, persahabatan, dan kebersamaan."
+            </p>
+          </div>
+
+          <!-- Section: Struktur Pengurus Kelas -->
+          <div style="margin-top: 72px;">
+            <div class="section-header" style="margin-bottom: 40px;">
+              <h2 class="section-title">Struktur Pengurus Kelas</h2>
+              <p class="section-desc">Pengurus kelas TRJTA 24 yang mengoordinasikan kegiatan dan komunikasi perkuliahan.</p>
+            </div>
+
+            <div class="officers-grid" id="officersGrid">
+              <!-- Rendered by main.js (3 Cards: Komisaris, Wakil, Bendahara) -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       LIGHTBOX MODAL (UNTUK ITEM GALERI)
+       ======================================================================== -->
+  <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true">
+    <div class="lightbox-content">
+      <button class="lightbox-close-btn" id="lightboxCloseBtn" aria-label="Tutup Lightbox">✕</button>
+      
+      <div class="lightbox-header-visual">
+        <span class="lightbox-category-tag" id="lightboxCategory">Praktikum</span>
+        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 8px;"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+        <span id="lightboxBadge" style="font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; color: #cbd5e1;">Lab Praktikum</span>
+      </div>
+
+      <div class="lightbox-body">
+        <h3 class="lightbox-title" id="lightboxTitle">Judul Dokumentasi</h3>
+        <div class="lightbox-date" id="lightboxDate">21 September 2026</div>
+        <p class="lightbox-desc" id="lightboxDesc">Deskripsi lengkap mengenai kegiatan dokumentasi kelas TRJTA 24.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-simple-container">
+      <!-- Sebelah Kiri: Hak Cipta -->
+      <div class="footer-copy-simple">
+        <span>© 2026 Ilal ilhamdi.</span>
+      </div>
+
+      <!-- Sebelah Kanan: Tombol Instagram -->
+      <div class="footer-social-simple">
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          <span>Instagram</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts Supabase, Data & Logika Aplikasi -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/supabase.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
